@@ -1,0 +1,22 @@
+文档说明
+
+zerg.sql是数据库文件,在本系统中，运行环境是Navicat
+
+营销商城小程序是小程序文件夹，在“微信开发者工具”中导入本文件夹即可打开运行。
+
+下载XAMMP，替换掉htdocs文件，
+打开Apache服务和sql服务，
+在Apache的config->PHP(php.ini)->该文件的最后加上以下这段代码
+[Xdebug]
+zend_extension = D:\XAMMP\php\ext\php_xdebug-2.6.1-7.2-vc15.dll
+xdebug.romote_enable=1
+xdebug.romote_handler=dbgp
+xdebug.romote_mode=req
+xdebug.romote_host=localhost
+xdebug.romote_port=9000
+xdebug.idekey="PHPSTORM"
+
+其中D:\XAMMP\php\ext\php_xdebug-2.6.1-7.2-vc15.dll是我安装XAMMP中php的路径，对着找就可以。
+
+配置虚拟域名z.cn  和  t.cn
+其中z.cn是访问项目，t.cn是访问订单管理。
